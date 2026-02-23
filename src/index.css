@@ -1,0 +1,99 @@
+/* Modern dark theme tokens */
+:root {
+  color-scheme: dark;
+
+  /* Background */
+  --bg-0: #0b0f17; /* page */
+  --bg-1: #0f172a; /* elevated */
+  --bg-2: rgba(255, 255, 255, 0.06); /* glass */
+
+  /* Surfaces / borders */
+  --border-1: rgba(255, 255, 255, 0.12);
+  --border-2: rgba(255, 255, 255, 0.18);
+
+  /* Text */
+  --text-0: rgba(255, 255, 255, 0.92);
+  --text-1: rgba(255, 255, 255, 0.76);
+  --text-2: rgba(255, 255, 255, 0.58);
+
+  /* Accent (cool blue like modern iOS) */
+  --accent: #5ac8fa;
+  --accent-2: #0a84ff;
+  --danger: #ff453a;
+  --success: #30d158;
+
+  /* Shadows */
+  --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 18px 60px rgba(0, 0, 0, 0.45);
+
+  /* Motion */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-1: 160ms;
+  --dur-2: 260ms;
+
+  /* Radius */
+  --r-1: 12px;
+  --r-2: 18px;
+  --r-3: 24px;
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgba(90, 200, 250, 0.35);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(
+      1200px 600px at 15% -10%,
+      rgba(10, 132, 255, 0.24),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 85% 0%,
+      rgba(90, 200, 250, 0.22),
+      transparent 55%
+    ),
+    var(--bg-0);
+  color: var(--text-0);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(90, 200, 250, 0.9);
+  text-decoration: underline;
+}
+
+/* Focus visibility */
+:where(a, button, input, select, textarea, [role="button"]) :focus {
+  outline: none;
+}
+
+:where(a, button, input, select, textarea, [role="button"]):focus-visible {
+  box-shadow: var(--focus-ring);
+  border-radius: 10px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
