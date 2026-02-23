@@ -76,5 +76,3 @@ src/pages/: 각 기능별 페이지 컴포넌트 (Home, List, Detail, Cart, Libr
 src/components/: 재사용 가능한 UI 컴포넌트 (GameItem 등)
 
 src/data/games.ts: 게임 상품 데이터 관리
-
-과제 제출자: [본인 성함 또는 학번]
