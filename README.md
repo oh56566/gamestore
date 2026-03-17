@@ -16,6 +16,7 @@ npm install
 Bash
 npm start
 브라우저에서 http://localhost:3000 접속을 통해 확인 가능합니다.
+웹 https://finalgamestore.vercel.app/
 
 🛠 사용된 기술 스택 (Tech Stack)
 Frontend: React (TypeScript)
